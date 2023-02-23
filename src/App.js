@@ -5,10 +5,12 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Clients from './pages/Clients'
 import Contact from './pages/Contact'
+import Layout from './components/Layout';
 
 function App() {
   return (
     <div className="App">
+      <Layout>
        <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -17,6 +19,7 @@ function App() {
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
        </BrowserRouter>
+      </Layout>
     </div>
   );
 }
