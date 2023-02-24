@@ -1,14 +1,15 @@
-import React from 'react'
-import Layout from '../../components/Layout'
+import React from "react";
+import Layout from "../../components/Layout";
+import Intro from "./Intro";
+import MarketingStrategies from "./MarketingStrategies";
 
 function Home() {
   return (
     <Layout>
-
-    <div>Home</div>
-    
+      <Intro />
+      <MarketingStrategies />
     </Layout>
-  )
+  );
 }
 
-export default Home
+export default Home;
