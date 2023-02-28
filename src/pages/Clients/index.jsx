@@ -1,8 +1,12 @@
 import React from 'react'
+import Intro from './Intro'
+import Layout from '../../components/Layout'
 
 function Clients() {
   return (
-    <div>Clients</div>
+    <Layout>
+        <Intro/>
+    </Layout>
   )
 }
 
