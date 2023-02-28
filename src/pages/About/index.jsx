@@ -1,9 +1,12 @@
 import React from 'react'
+import Intro from './Intro'
 
 function About() {
   return (
-
-    <div>About</div>
+    
+    <div>
+        <Intro/>
+    </div>
   )
 }
 

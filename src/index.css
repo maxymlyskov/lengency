@@ -3,6 +3,24 @@
 *{
   font-family: 'Montserrat', sans-serif !important;
 }
+
+html, body{
+  overflow:hidden
+}
+
+.about-intro{
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg,#ff4e00,#ec9f05 74%);
+  overflow-x: hidden!important;
+
+  transform:rotate(12deg);
+  position:absolute;
+  top:-33%;
+  left:-100px;
+  right:0;
+  border-radius:50px
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
