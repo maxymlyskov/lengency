@@ -12,9 +12,9 @@ function Intro() {
         <div className='mt-24 ml-8'>
             <h1 className="text-8xl font-semibold text-white border-b border-b-white">SHEYTAILWIND</h1>
             <div className="flex flex-row gap-3">
-              <p className="text-md mt-5 text-gray-200">OLDER</p>
-              <p className="text-md mt-5 text-gray-200 border-x px-2 border-gray-200 border-">STRONGER</p>
-              <p className="text-md mt-5 text-gray-200">WISER</p>
+              <p className="text-md mt-5 text-gray-200 font-semibold">OLDER</p>
+              <p className="text-md mt-5 text-gray-200 border-x px-2 border-gray-200 font-semibold">STRONGER</p>
+              <p className="text-md mt-5 text-gray-200 font-semibold">WISER</p>
             </div>
         </div>
     </div>
