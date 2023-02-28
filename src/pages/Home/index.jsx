@@ -6,8 +6,10 @@ import MarketingStrategies from "./MarketingStrategies";
 function Home() {
   return (
     <Layout>
+      <div className="px-32">
       <Intro />
       <MarketingStrategies />
+      </div>
     </Layout>
   );
 }
