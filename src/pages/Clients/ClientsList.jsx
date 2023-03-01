@@ -1,6 +1,8 @@
-import React from 'react'
+import {useState} from 'react'
 
 function ClientsList() {
+  const [selectedClientIndex, setSelectedClientIndex] = useState(0);
+
   const clients = [
     {
         name:"Slack",
@@ -35,17 +37,22 @@ function ClientsList() {
     },
   ]
 
+  const previous = ()=>setSelectedClientIndex(selectedClientIndex-1)
+  const next = ()=>setSelectedClientIndex(selectedClientIndex+1)
+
   return (
     <div>
         <div className="bg-primary h-44 rounded-b-full"></div>
-        <div className="flex justify-center -mt-44">
-            <div className="bg-white shadow p-5 w-[500px] border">
+        <div className="flex justify-center -mt-44 items-end space-x-10">
+            {selectedClientIndex!==0 && <i onClick={previous} className="ri-arrow-left-line text-4xl text-gray-600 cursor-pointer hover:bg-gray-700 p-2 hover:text-white hover:rounded duration-300"></i>}
+            <div className="bg-white shadow p-5 w-[500px] border h-[400px]">
                 <div className="flex space-x-10 items-center justify-between">
-                    <h1 className='text-primary font-semibold text-2xl'>{clients[0].name}</h1>
-                    <img className='h-32 w-32' src={clients[0].logo} alt={clients[0].name} />
+                    <h1 className='text-primary font-semibold text-2xl'>{clients[selectedClientIndex].name}</h1>
+                    <img className='h-32 w-32' src={clients[selectedClientIndex].logo} alt={clients[selectedClientIndex].name} />
                 </div>
-                <p className='text-gray-600 text-md mt-10'>{clients[0].description}</p>
+                <p className='text-gray-600 text-md mt-10'>{clients[selectedClientIndex].description}</p>
             </div>
+            {selectedClientIndex!==clients.length-1 && <i onClick={next} className="ri-arrow-right-line text-4xl text-gray-600 cursor-pointer hover:bg-gray-700 p-2 hover:text-white hover:rounded duration-300"></i>}
         </div>
     </div>
   )
