@@ -37,22 +37,37 @@ function ClientsList() {
     },
   ]
 
-  const previous = ()=>setSelectedClientIndex(selectedClientIndex-1)
-  const next = ()=>setSelectedClientIndex(selectedClientIndex+1)
+  const previous = ()=>{
+    setSelectedClientIndex(selectedClientIndex-1)
+}
+  const next = ()=>{
+    if(selectedClientIndex < 2)  setSelectedClientIndex(selectedClientIndex+1)
+}
 
   return (
     <div>
         <div className="bg-primary h-44 rounded-b-full"></div>
         <div className="flex justify-center -mt-44 items-end space-x-10">
             {selectedClientIndex!==0 && <i onClick={previous} className="ri-arrow-left-line text-4xl text-gray-600 cursor-pointer hover:bg-gray-700 p-2 hover:text-white hover:rounded duration-300"></i>}
-            <div className="bg-white shadow p-5 w-[500px] border h-[400px]">
+            <div className="grid grid-cols-3 gap-10">
+            {[clients[selectedClientIndex],clients[selectedClientIndex+1],clients[selectedClientIndex+2]].map(item=>{
+                return <div className="bg-white shadow p-5 w-[400px] border h-[300px]">
                 <div className="flex space-x-10 items-center justify-between">
-                    <h1 className='text-primary font-semibold text-2xl'>{clients[selectedClientIndex].name}</h1>
-                    <img className='h-32 w-32' src={clients[selectedClientIndex].logo} alt={clients[selectedClientIndex].name} />
+                    <img className='h-32 w-32 -mt-14' src={item.logo} alt={item.name} />
+                    <h1 className='text-primary font-semibold text-2xl'>{item.name}</h1>
                 </div>
-                <p className='text-gray-600 text-md mt-10'>{clients[selectedClientIndex].description}</p>
+                <p className='text-gray-600 text-md mt-10'>{item.description}</p>
             </div>
-            {selectedClientIndex!==clients.length-1 && <i onClick={next} className="ri-arrow-right-line text-4xl text-gray-600 cursor-pointer hover:bg-gray-700 p-2 hover:text-white hover:rounded duration-300"></i>}
+            })}
+            </div>
+            {selectedClientIndex<2 && <i onClick={next} className="ri-arrow-right-line text-4xl text-gray-600 cursor-pointer hover:bg-gray-700 p-2 hover:text-white hover:rounded duration-300"></i>}
+        </div>
+        <div className="flex justify-center mt-10">
+            <div  className="flex space-x-2">
+                {[1,2,3].map((item,i)=>{
+                    return <div onClick={()=>setSelectedClientIndex(i)} className={`bg-gray-300 h-4 w-4 rounded-full cursor-pointer transform transition-all hover:scale-104 duration-200 ${selectedClientIndex === i && 'border-2 border-secondary h-5 w-5'}`}></div>
+                })}
+            </div>
         </div>
     </div>
   )
