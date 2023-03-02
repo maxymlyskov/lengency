@@ -6,6 +6,7 @@ import About from './pages/About'
 import Clients from './pages/Clients'
 import Contact from './pages/Contact'
 import Layout from './components/Layout';
+import Temp from './pages/temp';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='/clients' element={<Clients/>}/>
           <Route path='/contact' element={<Contact/>}/>
+          <Route path='/temp' element={<Temp/>}/>
         </Routes>
        </Layout>
        </BrowserRouter>

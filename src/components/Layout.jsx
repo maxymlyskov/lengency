@@ -17,7 +17,7 @@ function Layout({children}) {
         <div className="fixed bottom-10 left-0 right-0 text-center w-full">
             <div className="flex w-full justify-center">
                 {menuItems.map((item, i)=>
-                <div className='flex flex-col justify-end items-center '>
+                <div key={item.title} className='flex flex-col justify-end items-center '>
                 {location.pathname ===item.path &&  (<div className='flex flex-col items-center'>
                     <div className='h-5 w-10 bg-primary rounded-t-full'></div>
                     <div className='h-5 w-20 bg-primary rounded-t-full text-center'>

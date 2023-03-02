@@ -31,7 +31,7 @@ function MarketingStrategies() {
 
       <div className="grid grid-cols-2 mt-10 gap-20">
         {strategies.map(strategy=>{
-          return <div className="border border-primary p-5 flex flex-col space-y-10 rounded transform hover:scale-105 duration-300">
+          return <div key={strategy.title} className="border border-primary p-5 flex flex-col space-y-10 rounded transform hover:scale-105 duration-300">
             <h1 className='mx-20 text-center -mt-8 bg-white border border-primary text-2xl rounded text-secondary py-2'>{strategy.title}</h1>
             <img src={strategy.image} alt={strategy.title} className="h-24 w-24" />
             <p className='text-gray-600 text-md hover:text-primary'>{strategy.description}</p>
