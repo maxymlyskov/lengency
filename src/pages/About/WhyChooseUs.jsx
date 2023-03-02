@@ -20,11 +20,11 @@ function WhyChooseUs() {
     ]
 
   return (
-    <div className='mx-32 mt-20 border shadow'>
+    <div className='mx-32 mt-20 border shadow sm:mx-0 sm:px-3'>
         <div className="bg-primary h-72 w-full flex justify-center items-center">
-            <h1 className='text-7xl font-semibold text-white'>Why Choose Us</h1>
+            <h1 className='text-7xl font-semibold text-white sm:text-4xl'>Why Choose Us</h1>
         </div>
-        <div className="grid grid-cols-3 p-5 gap-5">
+        <div className="grid grid-cols-3 p-5 gap-5 xl:grid-cols-1">
 
         {items.map(item=>{
             return <div key={item.title} className="p-5 bg-white border shadow flex flex-col space-y-5 items-center transform hover:scale-105 duration-300">
