@@ -25,14 +25,14 @@ function MarketingStrategies() {
   ]
   return (
     <div>
-      <h1 className="text-5xl font-semibold text-primary">Wnat to boost your buisness growth ?</h1>
-      <h1 className="text-7xl font-semibold text-primary  mt-10">The <b className='text-secondary'>SOLUTION</b> is here...</h1>
+      <h1 className="text-3xl font-semibold text-primary sm:mt-10">Wnat to boost your buisness growth ?</h1>
+      <h1 className="text-7xl font-semibold text-primary  mt-10 sm:text-5xl">The <b className='text-secondary sm:text-6xl'>SOLUTION</b> is here...</h1>
       <p className='text-gray-600 text-xl mt-10'>Curious about what business professionals think of different marketing strategies. We took a look at recent survey results and reports that compiled data on the topic, and created a list of 10 B2B marketing strategies commonly recognized as successful regardless of industry. Here’s what we found, in no particular order:</p>
 
-      <div className="grid grid-cols-2 mt-10 gap-20">
+      <div className="grid grid-cols-2 mt-10 gap-20 xl:grid-cols-1">
         {strategies.map(strategy=>{
           return <div key={strategy.title} className="border border-primary p-5 flex flex-col space-y-10 rounded transform hover:scale-105 duration-300">
-            <h1 className='mx-20 text-center -mt-8 bg-white border border-primary text-2xl rounded text-secondary py-2'>{strategy.title}</h1>
+            <h1 className='mx-20 text-center sm:mx-5 -mt-8 bg-white border border-primary text-2xl rounded text-secondary py-2'>{strategy.title}</h1>
             <img src={strategy.image} alt={strategy.title} className="h-24 w-24" />
             <p className='text-gray-600 text-md hover:text-primary'>{strategy.description}</p>
           </div>
