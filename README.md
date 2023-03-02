@@ -1,5 +1,5 @@
 # Website link
-https://lengency-bdth.vercel.app/about
+https://lengency-bdth.vercel.app/
 
 # Getting Started with Create React App
 
