@@ -50,7 +50,7 @@ function ClientsList() {
         <div className="bg-primary h-44 rounded-b-full sm:rounded-b-2xl"></div>
         <div className="flex justify-center -mt-44 sm:-mt-20 items-end space-x-10 sm:space-x-0 sm:p-5">
             {selectedClientIndex!==0 && <i onClick={previous} className="ri-arrow-left-line  sm:hidden text-4xl text-gray-600 cursor-pointer hover:bg-gray-700 p-2 hover:text-white hover:rounded duration-300"></i>}
-            <div className="grid grid-cols-3 gap-10 sm:grid-cols-1 ">
+            <div className="grid grid-cols-3 gap-10 xl:grid-cols-1 ">
             {[clients[selectedClientIndex],clients[selectedClientIndex+1],clients[selectedClientIndex+2]].map(item=>{
                 return <div key={item.name} className="bg-white shadow p-5 w-[400px] sm:w-auto border h-[300px] sm:h-auto">
                 <div className="flex space-x-10 items-center justify-between sm:space-x-0 sm:flex-col">
