@@ -6,7 +6,7 @@ import ContactForm from './ContactForm'
 function Contact() {
   return (
       <Layout>
-        <div className='grid grid-cols-2 px-32 gap-20 mt-32 sm:grid-cols-1 sm:p-5 sm:mt-10'>
+        <div className='grid grid-cols-2 px-32 gap-20 mt-32 xl:grid-cols-1 xl:p-5 xl:mt-10'>
           <Address/>
           <ContactForm/>
         </div>

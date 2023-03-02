@@ -8,7 +8,7 @@ function Intro() {
           The Best <br /> <b className="text-secondary">Marketing</b>
         </h1>
         <h1 className="text-4xl font-semibold my-5 mb-10 text-primary">Doesn't feel like marketing</h1>
-        <button className="px-16 py-5 bg-secondary text-xl text-white max-w-max hover:bg-primary rounded">
+        <button className="px-16 py-5 bg-secondary text-xl text-white max-w-max hover:bg-primary rounded duration-300">
           Get Started
         </button>
       </div>

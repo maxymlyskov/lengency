@@ -26,9 +26,9 @@ function Layout({children}) {
                             <i className={`${item.icon} text-xl text-white`}></i>
                         </div>
                     </div>)}
-                    <div className={`px-20 sm:px-7   bg-primary py-5 ${i===0 && 'rounded-l'} ${i===menuItems.length-1 && 'rounded-r'} flex items-center justify-center space-x-2`}>
-                        {location.pathname !== item.path && <i onClick={()=>navigate(item.path)} className={`${item.icon} text-secondary text-xl`}></i>}
-                        <Link to={`${item.path}`} className={`text-secondary text-xl ${item.path!==location.pathname && 'sm:hidden'}`}>{item.title}</Link> 
+                    <div className={`px-20 xl:px-7  bg-primary py-5 ${i===0 && 'rounded-l'} ${i===menuItems.length-1 && 'rounded-r'} flex items-center justify-center space-x-2`}>
+                        {location.pathname !== item.path && <i onClick={()=>navigate(item.path)} className={`${item.icon} text-secondary text-xl cursor-pointer hover:text-gray-600 duration-300`}></i>}
+                        <Link to={`${item.path}`} className={`text-secondary text-xl ${item.path!==location.pathname && 'sm:hidden'} hover:text-gray-600 duration-300`}>{item.title}</Link> 
                     </div>
                     </div>
                 )}
